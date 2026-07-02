@@ -1017,7 +1017,7 @@ function createAccessGate() {
       <div class="access-copy">
         <div>
           <div class="access-brand">
-            <img src="./assets/brand/ux-pilot-mascot-green.png" alt="" />
+            <img src="./ux-pilot-mascot-green.png" alt="" />
             <span>
               <strong>UX Pilot</strong>
               <small>Command Center</small>
