@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX Pilot Competitive Command Center</title>
+    <link rel="stylesheet" href="./styles.css?v=vercel-1" />
+  </head>
+  <body class="auth-locked">
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="sidebar-head">
+          <a class="brand" href="#home" data-route="home" aria-label="UX Pilot Competitive Command Center">
+            <span class="brand-mark"><img src="./assets/brand/ux-pilot-mascot-green.png" alt="" /></span>
+            <span>
+              <strong>UX Pilot</strong>
+              <small>Command Center</small>
+            </span>
+          </a>
+          <button class="icon-btn sidebar-toggle" type="button" id="sidebarToggle" aria-label="Minimize sidebar" title="Minimize sidebar"><span aria-hidden="true">‹</span></button>
+        </div>
+
+        <nav class="nav-list" id="navList">
+          <button class="nav-item active" type="button" data-route="home"><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-label">Home</span></button>
+          <button class="nav-item" type="button" data-route="radar"><span class="nav-icon" aria-hidden="true">◎</span><span class="nav-label">Radar</span></button>
+          <button class="nav-item" type="button" data-route="features"><span class="nav-icon" aria-hidden="true">▧</span><span class="nav-label">Feature Matrix</span></button>
+          <button class="nav-item" type="button" data-route="pricing"><span class="nav-icon" aria-hidden="true">$</span><span class="nav-label">Pricing</span></button>
+          <button class="nav-item" type="button" data-route="profiles"><span class="nav-icon" aria-hidden="true">◫</span><span class="nav-label">Competitor Profiles</span></button>
+          <button class="nav-item" type="button" data-route="battlecards"><span class="nav-icon" aria-hidden="true">▤</span><span class="nav-label">Battlecards</span></button>
+          <button class="nav-item" type="button" data-route="arena"><span class="nav-icon" aria-hidden="true">VS</span><span class="nav-label">Battle Arena</span></button>
+          <button class="nav-item" type="button" data-route="insights"><span class="nav-icon" aria-hidden="true">✦</span><span class="nav-label">Insights</span></button>
+        </nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" id="mobileMenu">Menu</button>
+          <div>
+            <p class="caption">UX Pilot Internal Intelligence</p>
+            <h1 id="pageTitle">Competitive Radar</h1>
+          </div>
+          <div class="top-actions"></div>
+        </header>
+
+        <section class="controls" id="filterControls" aria-label="Filters">
+          <label class="search-box">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Search competitors, tags, strengths..." />
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="categoryFilter"></select>
+          </label>
+          <label>
+            <span>Risk</span>
+            <select id="threatFilter">
+              <option value="all">All risk levels</option>
+              <option value="8">High risk 8+</option>
+              <option value="6">Medium risk 6+</option>
+              <option value="0">Low risk</option>
+            </select>
+          </label>
+        </section>
+
+        <div class="view active" id="home"></div>
+        <div class="view" id="radar"></div>
+        <div class="view" id="features"></div>
+        <div class="view" id="pricing"></div>
+        <div class="view" id="profiles"></div>
+        <div class="view" id="battlecards"></div>
+        <div class="view" id="arena"></div>
+        <div class="view" id="insights"></div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js?v=vercel-1"></script>
+  </body>
+</html>
